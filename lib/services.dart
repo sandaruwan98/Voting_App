@@ -3,7 +3,7 @@
  * https://github.com/mahmudahsan
  */
 import "package:flutter/material.dart";
-import "package:voting_app/models/vote.dart";
+import "package:flutter_firebase_vote/models/vote.dart";
 import 'package:uuid/uuid.dart';
 
 Vote createMockVote() {

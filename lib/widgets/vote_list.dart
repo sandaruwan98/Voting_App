@@ -1,18 +1,24 @@
+import 'dart:js';
+
 /**
  * Created by Mahmud Ahsan
  * https://github.com/mahmudahsan
  */
 import "package:flutter/material.dart";
 import 'package:provider/provider.dart';
-import 'package:voting_app/state/vote.dart';
-import "package:voting_app/models/vote.dart";
+import 'package:flutter_firebase_vote/state/vote.dart';
+import "package:flutter_firebase_vote/models/vote.dart";
+
+import '../state/vote.dart';
 
 class VoteList extends StatelessWidget {
-  String selectedVoteId;
+  // String selectedVoteId = Provider.of<VoteState>(context);
 
   @override
   Widget build(BuildContext context) {
     Function alternateColor = getAlternate(start: 0);
+    String selectedVoteId =
+        Provider.of<VoteState>(context).activeVote?.voteId ?? '';
 
     return Consumer<VoteState>(
       builder: (context, voteState, child) {
@@ -42,7 +48,8 @@ class VoteList extends StatelessWidget {
                     Provider.of<VoteState>(context).activeVote = vote;
                   },
                 ),
-                color: alternateColor(),
+                color:
+                    selectedVoteId == vote.voteId ? Colors.white : Colors.blue,
               ),
           ],
         );

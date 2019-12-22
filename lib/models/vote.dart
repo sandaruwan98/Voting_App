@@ -1,8 +1,3 @@
-/**
- * Created by Mahmud Ahsan
- * https://github.com/mahmudahsan
- */
-
 class Vote {
   String voteId;
   String voteTitle;

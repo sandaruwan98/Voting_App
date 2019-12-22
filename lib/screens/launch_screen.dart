@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:voting_app/constants.dart';
-import 'package:voting_app/widgets/shared_widgets.dart';
+import 'package:flutter_firebase_vote/widgets/shared_widgets.dart';
+import 'package:flutter_firebase_vote/constants.dart';
 
 class LaunchScreen extends StatelessWidget {
   @override
@@ -14,7 +14,7 @@ class LaunchScreen extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 100),
             child: Text(
-              appName,
+              kAppName,
               style: TextStyle(
                 fontSize: 40.0,
                 fontWeight: FontWeight.bold,
@@ -25,41 +25,23 @@ class LaunchScreen extends StatelessWidget {
           SizedBox(
             height: 200.0,
           ),
-          // if (authState.authStatus == kAuthLoading)
-          //   Text(
-          //     'loading...',
-          //     style: TextStyle(fontSize: 12.0),
-          //   ),
-          // if (authState.authStatus == null ||
-          //     authState.authStatus == kAuthError)
-          Container(
-            child: Column(
-              children: <Widget>[
-                LoginButton(
-                  label: 'Google Sign In',
-                  onPressed: () => signIn(context),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                LoginButton(
-                  label: 'Anonymous Sign In',
-                  onPressed: () => signIn(context),
-                ),
-              ],
-            ),
+          LoginButton(
+            label: 'Google Sign In',
+            onPressed: () => signIn(context),
           ),
-          // if (authState.authStatus == kAuthError)
-          //   Text(
-          //     'Error...',
-          //     style: TextStyle(fontSize: 12.0, color: Colors.redAccent),
-          //   ),
+          SizedBox(
+            height: 10,
+          ),
+          LoginButton(
+            label: 'Anonymous Sign In',
+            onPressed: () => signIn(context),
+          ),
         ],
       ),
     );
   }
 
-  void signIn(BuildContext context) {
+  void signIn(context) {
     Navigator.pushReplacementNamed(context, '/home');
   }
 }

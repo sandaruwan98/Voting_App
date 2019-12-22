@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
+/**
+ * Created by Mahmud Ahsan
+ * https://github.com/mahmudahsan
+ */
+
 class LoginButton extends StatelessWidget {
   String label;
   double size;
   Function onPressed;
 
-  LoginButton({this.label, this.size = 300.0, this.onPressed});
+  LoginButton({this.label, this.size = 300.0, this.onPressed = null});
 
   @override
   Widget build(BuildContext context) {

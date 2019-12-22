@@ -4,7 +4,7 @@
  */
 
 import "package:flutter/material.dart";
-import "package:voting_app/models/vote.dart";
+import "package:flutter_firebase_vote/models/vote.dart";
 
 class Vote extends StatelessWidget {
   List<Vote> voteList;

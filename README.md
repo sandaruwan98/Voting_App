@@ -1,16 +1,25 @@
-# voting_app
+# flutter_firebase_vote
 
-A new Flutter project.
+A flutter and firebase based vote application.
 
-## Getting Started
+> #### Features
+Features:
 
-This project is a starting point for a Flutter application.
+ 1. User can sign in
+ 2. User can see vote List from Firebase
+ 3. A user can not vote for an option more than one time
+ 4. User can see result
+ 5. User can share screenshot in social media
 
-A few resources to get you started if this is your first Flutter project:
+### Resources
+- [Chart Gallery](https://google.github.io/charts/flutter/gallery.html)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+#### Widgets
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Radio Class](https://api.flutter.dev/flutter/material/Radio-class.html)
+- [Stepper Class](https://api.flutter.dev/flutter/material/Stepper-class.html)
+- [Widget Index](https://flutter.dev/docs/reference/widgets)
+
+#### 3rd Party Libraries
+
+- [UUID](https://pub.dev/packages/uuid)
