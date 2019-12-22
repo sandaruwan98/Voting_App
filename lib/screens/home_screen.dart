@@ -13,9 +13,14 @@ class _HomeScreenState extends State<HomeScreen> {
         children: <Widget>[
           Expanded(
             child: Stepper(type: StepperType.horizontal, steps: [
-              Step(
-                title: Text("Choose"),
-                content: Text("data 1"),
+              getStep(
+                title: "Choose",
+                child: Text('Somrrrr'),
+                isActive: true,
+              ),
+              getStep(
+                title: "Vote",
+                child: Text('Somrgffrrr'),
                 isActive: true,
               ),
             ]),
@@ -23,5 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
     );
+  }
+
+  Step getStep({String title, Widget child, bool isActive = false}) {
+    return Step(title: Text(title), content: child, isActive: isActive);
   }
 }
